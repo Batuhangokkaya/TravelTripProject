@@ -1,0 +1,31 @@
+﻿@using TTP.Models.Entities
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Blog Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Baslik</td>
+            <td>
+                <a href="/Admin/BlogSil/@item.ID" class="btn btn-danger">Sil</a>
+                @*@Html.ActionLink("Sil", "BlogSil", new { id = item.ID })*@
+            </td>
+            <td><a href="/Admin/BlogGetir/@item.ID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Blog/BlogDetay/@item.ID" class="btn btn-light">DETAYLAR</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniBlog" class="btn btn-outline-primary">Yeni Blog</a>

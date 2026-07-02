@@ -1,0 +1,21 @@
+﻿@using TTP.Models.Entities
+@model Hakkimizda
+@{
+    ViewBag.Title = "HakkimizdaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımızda Güncelleme Sayfası</h2>
+@using (Html.BeginForm("HakkimizdaGuncelle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>Görsel</label>
+    @Html.TextBoxFor(x => x.FotoURL, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Blog Güncelle</button>
+}

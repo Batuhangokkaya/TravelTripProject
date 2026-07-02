@@ -1,0 +1,18 @@
+﻿@using TTP.Models.Entities
+@model List<Blog>
+<div class="padding1">
+    <h4>En Son Gezdiğimiz Yerlerimiz</h4>
+    <div class="box-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img src="@item.BlogImage" alt="" style="width: 120px; height:65px;" />
+            </div>
+            <div class="bot-desc">
+                <p>@(item.Aciklama.Length > 100 ? item.Aciklama.Substring(0, 70) + "..." : item.Aciklama)</p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+        @Html.Action("Partial5", "Default")
+</div>

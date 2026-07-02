@@ -1,0 +1,24 @@
+﻿@using TTP.Models.Entities
+@model List<Hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Hakkımızda</h3>
+                @foreach (var item in Model)
+                {
+                    <img src="@item.FotoURL" alt="" />
+                    <P>@item.Aciklama</P>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

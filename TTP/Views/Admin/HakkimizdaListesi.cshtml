@@ -1,0 +1,22 @@
+﻿@using TTP.Models.Entities
+@model Hakkimizda
+@{
+    ViewBag.Title = "HakkimizdaListesi";
+    Layout        = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Hakkımızda Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>GÖRSEL</th>
+        <th>AÇIKLAMA</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td>@Model.FotoURL</td>
+        <td>@Model.Aciklama</td>
+        <td><a href="/Admin/HakkimizdaGetir/@Model.ID" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+</table>

@@ -1,0 +1,27 @@
+﻿@using TTP.Models.Entities
+@model Iletisim
+@{
+    ViewBag.Title = "IletisimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim Güncelleme Sayfası</h2>
+@using (Html.BeginForm("IletisimGuncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+    <br />
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Konu</label>
+    @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+    <br />
+    <label>Görsel Seç</label>
+    @Html.TextAreaFor(x => x.Mesaj, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Blog Güncelle</button>
+}

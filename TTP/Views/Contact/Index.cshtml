@@ -1,0 +1,75 @@
+﻿@using TTP.Models.Entities
+@model IletisimAdres
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="contact-form">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgileri</h3>
+                <p>@ViewBag.Aciklama</p>
+            </div>
+            <div class="content-form">
+                @using (Html.BeginForm("IletisimGonder", "Contact", FormMethod.Post))
+                {
+                    <div>
+                        <input type="text" name="AdSoyad" value="İsim Soyisim:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'İsim Soyisim:';}">
+                    </div>
+                    <input type="text" name="Mail" value="Mail:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail:';}">
+                    <div>
+                        <input type="text" name="Telefon" value="Telefon:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telefon:';}">
+                    </div>
+                    <div>
+                        <input type="text" name="Konu" value="Konu:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Konu:';}">
+                    </div>
+                    <div>
+                        <textarea name="Mesaj" value="Mesaj:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mesaj:';}">Mesaj:</textarea>
+                    </div>
+                    <div>
+                        <p><input type="submit" class="read" value="Gönder"></p>
+                    </div>
+                }
+                </div>
+            <br />
+            <div class="clear"></div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        @foreach (var item in Model.Deger2)
+                        {
+                            <h3>@item.Baslik</h3>
+                            <p>Telefon: @item.Telefon</p>
+                            <p>Email: <a href="mailto:signup@gmail.com">@item.Mail</a></p>
+                            <p>Konum: @item.Konum</p>
+                        }
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe width="580" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?q=İstanbul&output=embed"></iframe><br><small><a href="https://www.google.com/maps/place/İstanbul@41.0052041,28.8473734,53009m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14caa7040068086b:0xe1ccfe98bc01b0d0!8m2!3d41.0082376!4d28.9783589!16zL20vMDk5NDlt!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D" style="color: #555;text-align:left">Haritayı Aç</a></small>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
