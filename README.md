@@ -1,23 +1,24 @@
-# Travel Project
+# Seyahat Projesi
 
-A dynamic travel and tourism web application developed with ASP.NET MVC (.NET Framework), C#, Entity Framework, and SQL Server.
+ASP.NET MVC (.NET Framework), C#, Entity Framework ve SQL Server ile geliştirilmiş dinamik bir seyahat ve turizm web uygulaması.
 
-## Technologies
+## Teknolojiler
 
 - ASP.NET MVC (.NET Framework)
 - C#
 - Entity Framework
 - SQL Server
 
-## Features
+## Özellikler
 
-- Dynamic destination listing
-- Blog and blog details
-- Comment system
-- Contact page
-- Admin panel
-- CRUD operations
+- Dinamik destinasyon listesi
+- Blog ve blog detayları
+- Yorum sistemi
+- İletişim sayfası
+- Admin paneli
+- CRUD işlemleri
 
-## Screenshots
+## Ekran Görüntüleri
+<img width="1851" height="824" alt="Admin Giriş" src="https://github.com/user-attachments/assets/da68b592-319f-49e8-9b5e-f8ff17700c7d" />
 
-(Add project screenshots here.)
+(Buraya proje ekran görüntüleri ekleyin.)
